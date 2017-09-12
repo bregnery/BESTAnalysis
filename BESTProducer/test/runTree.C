@@ -180,12 +180,16 @@ void runTree(string inFile, string outFile, string histName, float targX, float 
    reader->AddVariable( "tau21", &treeVars["tau21"] );
    reader->AddVariable( "SDmass", &treeVars["SDmass"]);
 
-   reader->BookMVA( "fourD", "weights/TMVARegression_5d_MLP.weights.xml");
-   reader->BookMVA("top", "weights/TMVAClassification_MLPBFGS.weights.xml");
-   reader->BookMVA("W", "weights/TMVAClassification_W_MLPBFGS.weights.xml");
-   reader->BookMVA("Z", "weights/TMVAClassification_Z_MLPBFGS.weights.xml");
-   reader->BookMVA("H", "weights/TMVAClassification_H_MLPBFGS.weights.xml");
-   reader->BookMVA("j", "weights/TMVAClassification_j_MLPBFGS.weights.xml");
+   // Weights for the Neural Network
+   reader->BookMVA( "fourD", "../TMVATraining/weights/TMVARegressionFoxWolfram_MLP.weights.xml");    // For testing
+   //reader->BookMVA( "fourD", "../TMVATraining/weights/TMVARegression_MLP.weights.xml");    // For testing
+   //reader->BookMVA( "fourD", "../TMVATraining/weights/TMVARegression_5d_MLP.weights.xml"); // For training
+/*   reader->BookMVA("top", "../TMVATraining/weights/TMVAClassification_MLPBFGS.weights.xml");
+   reader->BookMVA("W", "../TMVATraining/weights/TMVAClassification_W_MLPBFGS.weights.xml");
+   reader->BookMVA("Z", "../TMVATraining/weights/TMVAClassification_Z_MLPBFGS.weights.xml");
+   reader->BookMVA("H", "../TMVATraining/weights/TMVAClassification_H_MLPBFGS.weights.xml");
+   reader->BookMVA("j", "../TMVATraining/weights/TMVAClassification_j_MLPBFGS.weights.xml");
+*/
 
    TFile *weightFile = new TFile(histName.c_str(), "READ");
    TH1F *weightH = (TH1F *) weightFile->Get("weightH");

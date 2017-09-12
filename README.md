@@ -55,7 +55,7 @@ Finally, check the status of the job in CRAB.
 
 The files produced here can train the NN. Some of the most recentfiles are on the LPC at:
 
-    /store/user/pilot/BESTFiles/Aug8/
+    /eos/uscms/store/user/pilot/BESTFiles/Aug8/
 
 Preparing Files for Training
 ----------------------------
