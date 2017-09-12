@@ -84,7 +84,7 @@ void TMVARegression( TString myMethodList = "" )
    // 
    // --- Boosted Decision Trees
    Use["BDT"]             = 0;
-   Use["BDTG"]            = 1;
+   Use["BDTG"]            = 0;
    // ---------------------------------------------------------------
 
    std::cout << std::endl;

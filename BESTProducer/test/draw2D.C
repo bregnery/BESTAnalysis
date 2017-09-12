@@ -149,28 +149,33 @@ zzHist->GetZaxis()->SetTitle("Z Boson Jets");
 jjHist->Draw("lego");
 CMS_lumi(c1, 4, 0);
 c1->SaveAs("jj_5dOutput_cuts.pdf");
+c1->SaveAs("jj_5dOutput_cuts.png");
 TCanvas *c2 = new TCanvas();
 c2->cd();
 ttHist->Draw("lego  ");
 CMS_lumi(c2, 4, 0);
 c2->SaveAs("tt_5dOutput_cuts.pdf");
+c2->SaveAs("tt_5dOutput_cuts.png");
 TCanvas *c5 = new TCanvas();
 c5->cd();
 wwHist->Draw("lego  ");
 CMS_lumi(c5, 4, 0);
 c5->SaveAs("ww_5dOutput_cuts.pdf");
+c5->SaveAs("ww_5dOutput_cuts.png");
 
 TCanvas *c4 = new TCanvas();
 c4->cd();
 zzHist->Draw("lego  ");
 CMS_lumi(c4, 4, 0);
 c4->SaveAs("zz_5dOutput_cuts.pdf");
+c4->SaveAs("zz_5dOutput_cuts.png");
 
 TCanvas *c3 = new TCanvas();
 c3->cd();
 hhHist->Draw("lego  ");
 CMS_lumi(c3, 4, 0);
 c3->SaveAs("hh_5dOutput_cuts.pdf");
+c3->SaveAs("hh_5dOutput_cuts.png");
 
 TCanvas *c6 = new TCanvas();
 
@@ -187,6 +192,7 @@ gPad->SetBottomMargin(0.13);
 
 CMS_lumi(c6, 4, 0);
 c6->SaveAs("all_5dOutput_cuts.pdf");
+c6->SaveAs("all_5dOutput_cuts.png");
 
 
 
